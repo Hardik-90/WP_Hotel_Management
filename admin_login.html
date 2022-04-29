@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hotel Booking</title>
+        <link rel="stylesheet" href="Main.css">
+        <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <title>Animated Login Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+    function openWin2() {
+      window.open("redirect_admin_panel.html");
+    }
+    </script>
+  </head>
+  <body>
+
+<header> 
+            
+            <nav>
+                <div class="row">
+                    <img src="images/Logo.png" class="logo">
+                    <ul class="main-nav" id="check-class">
+                        <li><a href="Main.html">Home</a></li>
+                        <li><a href="Aboutus.html">About Us</a></li>
+                        
+                        <li><a href="attraction.html">Attractions </a></li>
+			<li><a href="Signup15-03.html">Sign Up</a></li>
+                        <li><a href="Login15-03.html">Login </a></li>
+                    </ul>
+                        <!-- <a href="#" class="mobile-icon" onclick="slideshow()"> <i class="fa fa-bars"></i></a>	 -->
+                </div>
+            </nav>
+
+</header>
+
+    <div class="center">
+      <center><h2>Admin Login </h2></center>
+      <form class="login" action="/Hotel Management/admin_login_pg.php" method="POST">
+        <div class="txt_field">
+          <input type="text" name="name" id="name">
+          <span></span>
+          <label>Username</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="password" name="pass" id="pass">
+          <span></span>
+          <label>Enter Password</label>
+        </div>
+	
+	<input type="button" value="Submit" onclick="openWin2()">
+	
+       <div class="signup_link">
+        </div>
+
+      </form>
+    </div>
+
+  </body>
+</html>

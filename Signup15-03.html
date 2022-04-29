@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Login Form</title>
+  </head>
+
+	<body>
+
+<header> 
+            
+            <nav>
+                <div class="row">
+                    
+                    <ul class="main-nav" id="check-class">
+                        <li><a href="Main.html">Home</a></li>
+                        <li><a href="Aboutus.html">About Us</a></li>
+                        <li><a href="Form.html">Book Your Room</a></li>
+                        <li><a href="attraction.html">Attractions </a></li>
+			<li><a href="Signup15-03.html">Sign Up</a></li>
+                        <li><a href="Login15-03.html">Login </a></li>
+                    </ul>
+			<center><B><A1> Sign-Up Form </A1></B></center>
+                        <!-- <a href="#" class="mobile-icon" onclick="slideshow()"> <i class="fa fa-bars"></i></a>	 -->
+                </div>
+            </nav>
+</header>
+
+<style type="text/css">
+body
+   {
+     margin:0px; background-color:#27a465; color:#f7f7f7; font-family:Arial, Helvetica, sans-serif;
+   }
+   #main
+   {
+     width:600px; height:260px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:100px;
+     border-top:3px double #f1f1f1; border-bottom:3px double #f1f1f1; padding-top:20px;
+   }
+   #main table
+   {
+     font-family:"Comic Sans MS", cursive;
+   } 
+  /* css code for textbox */
+  #main .tb
+  {
+    height:28px; width:230px; border:1px solid #27a465; color:#27a465; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;
+  }
+
+   /* css code for button*/
+   #main .btn
+   {
+    width:80px; height:32px; outline:none;  font-weight:bold; border:0px solid #27a465; text-shadow: 0px 0.5px 0.5px #fff;	
+    border-radius: 2px; font-weight: 600; color: #27a465; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+  
+   #main .btn:hover
+   {
+    background-color:#27a465; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+   }
+</style>
+
+<script>
+function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var emailid = document.getElementById("email_new").value;
+		var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+		var ph = document.getElementById("phone").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(emailid =='')
+		{
+			alert("please enter email id.");
+		}
+		else if (!emailid.match(pattern)) 
+		{
+			alert("Invalid! Please enter valid Email Id");
+		}
+		else if(ph =='')
+		{
+			alert("please enter phone number.");
+		}
+		else if(ph.length < 10 || ph.length > 10)
+		{
+			alert("Phone has min and max length of 10.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		
+		else if(pwd.length < 6)
+		{
+			alert("Password has min length of 6.");
+		}
+		
+		else
+		{
+	alert('Thank You for Signing In');
+  //Redirecting to other page or webste code or you can set your own html page.
+       
+			}
+	}
+	//Reset Inputfield code.
+	function clearFunc()
+	{
+		document.getElementById("email").value="";
+		document.getElementById("pwd1").value="";
+		document.getElementById("email_new").value="";
+		document.getElementById("phone").value="";
+	}
+</script>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>Welcome To the signup page</h2>
+	</div>
+	<!-- Login box -->
+	<form class="login" action="/Hotel Management/sign_up_page.php" method="POST">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter User Name :</td>
+	<td><input type="text" placeholder="Enter user name here" name="email" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Email Address :</td>
+	<td><input type="text" placeholder="Enter email address here" name="email_new" id="email_new" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Phone Number :</td>
+	<td><input type="text" placeholder="Enter phone number here" name="phone" id="phone" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" name="pwd1" id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+	<button type="submit" class="btn">Sign Up</button></td>
+	</tr>
+	</table>
+	</form>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+    
+  </body>
+  </html>
